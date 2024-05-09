@@ -1,3 +1,16 @@
 #answer{
     display: none;
+    background-color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+}
+  
+.resultname{
+    font-size: 26px;
+}
+  
+.resultDesc{
+    font-size: 18px;
+    margin-top: 20px;
 }

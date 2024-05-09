@@ -10,7 +10,7 @@ function calResult(){ // 결과 계산
   return result;
 }
 
-function setResult(){
+function setResult(){ //결과 계산
   let point = calResult();
   const resultName = document.querySelector('.resultname');
   resultName.innerHTML = infoList[point].name;
