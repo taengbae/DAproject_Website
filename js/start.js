@@ -2,8 +2,30 @@ const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const answer = document.querySelector("#answer")
 
+const select = [0,0,0,0,0,0,0,0,0,0,0,0]; // 결과 계산
 const endPoint = 12;
 
+function calResult(){ // 결과 계산
+  var result = select.indexOf(Math.max(...select));
+  return result;
+}
+
+function setResult(){
+  let point = calResult();
+  const resultName = document.querySelector('.resultname');
+  resultName.innerHTML = infoList[point].name;
+
+  var resultImg = document.createElement('img');
+  const imgDiv = document.querySelector('#resultImg');
+  var imgURL = 'img/img' + point + '.jpg';
+  resultImg.src = imgURL;
+  resultImg.alt = point;
+  resultImg.classList.add('img-fluid');
+  imgDiv.appendChild(resultImg);
+
+  const resultDesc = document.querySelector('.resultDesc');
+  resultDesc.innerHTML = infoList[point].desc;
+}
 
 function goResult(){
   qna.style.WebkitAnimation = "fadeOut 1s";
@@ -18,7 +40,7 @@ function goResult(){
     setResult();
 }
 
-function addAnswer(answerText, qIdx){
+function addAnswer(answerText, qIdx, idx){ //idx: 결과 계산
   var a = document.querySelector('.answerBox');
   var answer = document.createElement('button');
   answer.classList.add('answerList');
@@ -38,6 +60,11 @@ function addAnswer(answerText, qIdx){
       children[i].style.animation = "fadeOut 0.5s";
     }
     setTimeout(() => {
+      var target = qnaList[qIdx].a[idx].type; //결과 계산
+      for(let i = 0; i < target.length; i++){
+        select[target[i]] += 1;
+      } //결과 계산
+      
       for(let i = 0; i < children.length; i++){
         children[i].style.display = 'none';
       }
@@ -47,13 +74,13 @@ function addAnswer(answerText, qIdx){
 }
 
 function goNext(qIdx){
-  if(qIdx + 1 === endPoint){
+  if(qIdx === endPoint){
     goResult();
   }
   var q = document.querySelector('.qBox');
   q.innerHTML = qnaList[qIdx].q;
   for(let i in qnaList[qIdx].a){
-    addAnswer(qnaList[qIdx].a[i].answer, qIdx);
+    addAnswer(qnaList[qIdx].a[i].answer, qIdx, i); //맨 뒤 i: 결과 계산
   }
 
   // 진행 상태바
