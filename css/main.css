@@ -6,7 +6,12 @@
     text-align: center;
     border-radius: 20px;
   }
-  
-  p{
+
+  .ex{
     font-size: 20px;
   }
+
+  .mini {
+    font-size: 12px;
+    color: #bc5353;
+}
