@@ -1,9 +1,9 @@
 /*
-  'result0', 0
-  'result1', 1
-  'result2', 2
-  'result3', 3
-  'result4', 4
+  Level.1 나는 중고거래 입문자!, 0
+  Level.50 나는 중고거래 초보자!, 1
+  Level.100 나는 중고거래 중급자!, 2
+  Level.500 나는 중고거래 상급자!, 3
+  Level.1000 나는 중고거래의 신!, 4
 */
 
 const qnaList = [
