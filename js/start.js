@@ -17,7 +17,7 @@ function setResult(){ //결과 계산
 
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
-  var imgURL = 'img/img' + point + '.jpg';
+  var imgURL = 'img/img' + point + '.webp';
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add('img-fluid');
