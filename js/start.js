@@ -43,7 +43,8 @@ function goResult(){
 function addAnswer(answerText, qIdx, idx){ //idx: 결과 계산
   var a = document.querySelector('.answerBox');
   var answer = document.createElement('button');
-  answer.classList.add('answerList',idx);
+  answer.classList.add('answerList');
+  answer.classList.add('Qusetion',qIdx+1, 'Answer',idx+1);
   answer.classList.add('my-3');
   answer.classList.add('py-3');
   answer.classList.add('mx-auto');
