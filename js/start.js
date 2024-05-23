@@ -84,9 +84,9 @@ function goNext(qIdx){
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i); //맨 뒤 i: 결과 계산
   }
 
-  // 진행 상태바
-  // var status = document.querySelector('.statusBar');
-  // status.style.width = (100/endPoint) * (qIdx+1) + '%';
+  //진행 상태바
+  var status = document.querySelector('.statusBar');
+  status.style.width = (100/endPoint) * (qIdx+1) + '%';
 }
 
 function begin(){
