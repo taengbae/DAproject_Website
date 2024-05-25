@@ -2,8 +2,8 @@ const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const answer = document.querySelector("#answer")
 
-const select = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 결과 계산_질문개수 늘릴때마다 0하나 추가해줘야함
-const endPoint = 15;
+const select = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 결과 계산_질문개수 늘릴때마다 0하나 추가해줘야함
+const endPoint = 14;
 
 function calResult(){ // 결과 계산
   var result = select.indexOf(Math.max(...select));

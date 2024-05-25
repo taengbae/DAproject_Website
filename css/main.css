@@ -2,7 +2,7 @@
 
 #main{
     background-color: whitesmoke;
-    width: 80%;
+    width: 100%;
     text-align: center;
     border-radius: 20px;
   }
@@ -14,4 +14,8 @@
   .mini {
     font-size: 12px;
     color: #bc5353;
+
+  .exp{
+    font-size: 14px;
+  }
 }
